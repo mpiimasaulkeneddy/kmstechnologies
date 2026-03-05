@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | KMS Technologies UG</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        :root {
+            --primary: #0ea5e9; 
+            --secondary: #6366f1;
+            --bg: #030712;
+            --card-bg: rgba(17, 24, 39, 0.7);
+            --border: rgba(255, 255, 255, 0.1);
+            --text: #f9fafb;
+            --whatsapp: #25d366;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Inter', sans-serif; }
+        body { background-color: var(--bg); color: var(--text); line-height: 1.6; }
+
+        /* --- NAVIGATION --- */
+        nav {
+            position: fixed; top: 20px; left: 50%; transform: translateX(-50%);
+            width: 95%; max-width: 1200px; background: rgba(3, 7, 18, 0.8);
+            backdrop-filter: blur(15px); border: 1px solid var(--border);
+            border-radius: 100px; display: flex; justify-content: space-between;
+            align-items: center; padding: 8px 20px; z-index: 1000;
+        }
+        .logo-text { font-weight: 800; font-size: 1.2rem; color: var(--primary); text-decoration: none; }
+        .nav-links { display: flex; gap: 20px; list-style: none; }
+        .nav-links a { text-decoration: none; color: var(--text); font-size: 0.85rem; opacity: 0.7; transition: 0.3s; }
+        .nav-links a:hover { opacity: 1; color: var(--primary); }
+        .logo-wrapper {
+            width: 45px; height: 45px; border-radius: 50%; overflow: hidden;
+            border: 2px solid var(--primary); background: white;
+            display: flex; align-items: center; justify-content: center;
+        }
+        .logo-wrapper img { width: 140%; transform: translateY(-5%); }
+
+        /* --- HERO --- */
+        .about-hero {
+            padding: 180px 20px 100px; text-align: center;
+            background: radial-gradient(circle at top, #1e1b4b 0%, #030712 100%);
+        }
+        .about-hero h1 { font-size: clamp(2.5rem, 5vw, 4rem); font-weight: 800; margin-bottom: 20px; }
+        .about-hero p { color: #94a3b8; max-width: 700px; margin: 0 auto; font-size: 1.1rem; }
+
+        /* --- VISION & MISSION --- */
+        .vision-mission {
+            max-width: 1200px; margin: -50px auto 60px; padding: 0 20px;
+            display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px;
+        }
+        .vm-card {
+            background: linear-gradient(145deg, rgba(17, 24, 39, 0.9), rgba(3, 7, 18, 0.9));
+            border: 1px solid var(--border); padding: 40px; border-radius: 30px;
+            text-align: center;
+        }
+        .vm-card i { font-size: 2rem; color: var(--primary); margin-bottom: 20px; }
+        .vm-card h3 { margin-bottom: 15px; font-size: 1.5rem; }
+
+        /* --- STATS SECTION --- */
+        .stats-bar {
+            background: var(--primary); color: white; padding: 60px 20px;
+            display: flex; justify-content: center; flex-wrap: wrap; gap: 60px;
+            text-align: center; margin: 80px 0;
+        }
+        .stat-box h2 { font-size: 3rem; font-weight: 800; }
+        .stat-box p { font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1px; opacity: 0.9; }
+
+        /* --- VALUES GRID --- */
+        .values-section { max-width: 1200px; margin: 80px auto; padding: 0 20px; }
+        .values-header { text-align: center; margin-bottom: 50px; }
+        .values-grid {
+            display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px;
+        }
+        .value-item {
+            padding: 30px; border-radius: 20px; background: rgba(255,255,255,0.03);
+            border-left: 4px solid var(--primary); transition: 0.3s;
+        }
+        .value-item:hover { background: rgba(255,255,255,0.07); transform: translateY(-5px); }
+
+        /* --- WHATSAPP FLOATING BUTTON --- */
+        .whatsapp-btn {
+            position: fixed; bottom: 30px; right: 30px;
+            background-color: var(--whatsapp); color: white;
+            width: 60px; height: 60px; border-radius: 50%;
+            display: flex; align-items: center; justify-content: center;
+            font-size: 32px; text-decoration: none;
+            box-shadow: 0 10px 25px rgba(37, 211, 102, 0.4);
+            z-index: 2000;
+        }
+
+        @media (max-width: 768px) { .nav-links { display: none; } }
+    </style>
+</head>
+<body>
+
+    <a href="https://wa.me/256703872026" class="whatsapp-btn" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <nav>
+        <a href="index.html" class="logo-text">KMS <span style="color:white">TECH</span></a>
+        <ul class="nav-links">
+            <li><a href="index.html">index</a></li>
+            <li><a href="About Us.html" style="color: var(--primary); opacity: 1;">About Us</a></li>
+            <li><a href="Services.html">Services</a></li>
+            <li><a href="Projects.html">Projects</a></li>
+            <li><a href="Contact us.html">Contact</a></li>
+        </ul>
+        <div class="logo-wrapper"><img src="images/logo.png" alt="KMS Logo"></div>
+    </nav>
+
+    <header class="about-hero">
+        <h1>Empowering Uganda's Digital Future</h1>
+        <p>KMS Technologies UG is a premier ICT solutions provider dedicated to building robust infrastructure and security systems for the modern enterprise.</p>
+    </header>
+
+    <section class="vision-mission">
+        <div class="vm-card">
+            <i class="fas fa-eye"></i>
+            <h3>Our Vision</h3>
+            <p>To be the leading architect of digital transformation in East Africa, known for engineering excellence and integrity.</p>
+        </div>
+        <div class="vm-card">
+            <i class="fas fa-rocket"></i>
+            <h3>Our Mission</h3>
+            <p>Providing scalable, high-performance ICT infrastructure and security solutions that empower businesses to operate without boundaries.</p>
+        </div>
+    </section>
+
+    <div class="stats-bar">
+        <div class="stat-box"><h2>150+</h2><p>Projects Delivered</p></div>
+        <div class="stat-box"><h2>10+</h2><p>Years Experience</p></div>
+        <div class="stat-box"><h2>50+</h2><p>Corporate Clients</p></div>
+        <div class="stat-box"><h2>24/7</h2><p>Tech Support</p></div>
+    </div>
+
+    <section class="values-section">
+        <div class="values-header">
+            <h2>Our Core Values</h2>
+            <p style="color: #94a3b8;">The principles that guide every cable laid and every server configured.</p>
+        </div>
+        <div class="values-grid">
+            <div class="value-item">
+                <h4>Innovation</h4>
+                <p style="font-size: 0.85rem; color: #94a3b8;">We stay ahead of global tech trends to bring you the latest solutions.</p>
+            </div>
+            <div class="value-item">
+                <h4>Reliability</h4>
+                <p style="font-size: 0.85rem; color: #94a3b8;">Our systems are built to last, ensuring your business stays online always.</p>
+            </div>
+            <div class="value-item">
+                <h4>Integrity</h4>
+                <p style="font-size: 0.85rem; color: #94a3b8;">Honest pricing and genuine hardware are at the heart of our business.</p>
+            </div>
+            <div class="value-item">
+                <h4>Client Focus</h4>
+                <p style="font-size: 0.85rem; color: #94a3b8;">Your business goals drive our technical designs.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer style="text-align: center; padding: 40px; color: #4b5563; border-top: 1px solid var(--border);">
+        <p>© 2026 KMS Technologies UG. Professional ICT Partners.</p>
+    </footer>
+
+</body>
+</html>

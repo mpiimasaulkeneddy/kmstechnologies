@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Projects | KMS Technologies UG</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        :root {
+            --primary: #0ea5e9; 
+            --secondary: #6366f1;
+            --bg: #030712;
+            --card-bg: rgba(17, 24, 39, 0.7);
+            --border: rgba(255, 255, 255, 0.1);
+            --text: #f9fafb;
+            --whatsapp: #25d366;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Inter', sans-serif; }
+        body { background-color: var(--bg); color: var(--text); line-height: 1.6; }
+
+        /* --- NAVIGATION --- */
+        nav {
+            position: fixed; top: 20px; left: 50%; transform: translateX(-50%);
+            width: 95%; max-width: 1200px; background: rgba(3, 7, 18, 0.8);
+            backdrop-filter: blur(15px); border: 1px solid var(--border);
+            border-radius: 100px; display: flex; justify-content: space-between;
+            align-items: center; padding: 8px 20px; z-index: 1000;
+        }
+        .logo-text { font-weight: 800; font-size: 1.2rem; color: var(--primary); text-decoration: none; }
+        .nav-links { display: flex; gap: 20px; list-style: none; }
+        .nav-links a { text-decoration: none; color: var(--text); font-size: 0.85rem; opacity: 0.7; transition: 0.3s; }
+        .nav-links a:hover { opacity: 1; color: var(--primary); }
+        .logo-wrapper {
+            width: 45px; height: 45px; border-radius: 50%; overflow: hidden;
+            border: 2px solid var(--primary); background: white;
+            display: flex; align-items: center; justify-content: center;
+        }
+        .logo-wrapper img { width: 140%; transform: translateY(-5%); }
+
+        /* --- HERO --- */
+        .hero {
+            padding: 160px 20px 60px; text-align: center;
+            background: radial-gradient(circle at top, #1e1b4b 0%, #030712 100%);
+        }
+        .hero h1 { font-size: clamp(2.5rem, 5vw, 3.5rem); font-weight: 800; margin-bottom: 15px; }
+        .hero p { color: #94a3b8; max-width: 600px; margin: 0 auto; }
+
+        /* --- PROJECT GRID --- */
+        .projects-grid {
+            max-width: 1200px; margin: 0 auto; padding: 60px 20px;
+            display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 30px;
+        }
+
+        .project-card {
+            background: var(--card-bg); border: 1px solid var(--border);
+            border-radius: 24px; overflow: hidden; transition: 0.4s;
+            display: flex; flex-direction: column;
+        }
+
+        .project-card:hover { transform: translateY(-10px); border-color: var(--primary); }
+
+        .project-img {
+            width: 100%; height: 230px; object-fit: cover;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .project-content { padding: 25px; flex-grow: 1; }
+        
+        .tag {
+            font-size: 0.7rem; text-transform: uppercase; letter-spacing: 1px;
+            color: var(--primary); font-weight: 700; margin-bottom: 10px; display: block;
+        }
+
+        .project-content h3 { font-size: 1.4rem; margin-bottom: 10px; color: #fff; }
+        .project-content p { color: #94a3b8; font-size: 0.9rem; margin-bottom: 20px; }
+
+        .project-stats {
+            display: flex; gap: 15px; border-top: 1px solid var(--border);
+            padding-top: 15px; margin-top: auto;
+        }
+
+        .stat-item { font-size: 0.8rem; color: #fff; display: flex; align-items: center; gap: 5px; }
+        .stat-item i { color: var(--primary); }
+
+        /* --- WHATSAPP FLOATING BUTTON --- */
+        .whatsapp-btn {
+            position: fixed; bottom: 30px; right: 30px;
+            background-color: var(--whatsapp); color: white;
+            width: 60px; height: 60px; border-radius: 50%;
+            display: flex; align-items: center; justify-content: center;
+            font-size: 32px; text-decoration: none;
+            box-shadow: 0 10px 25px rgba(37, 211, 102, 0.4);
+            z-index: 2000; transition: 0.3s;
+        }
+
+        @media (max-width: 768px) { .nav-links { display: none; } }
+    </style>
+</head>
+<body>
+
+    <a href="https://wa.me/256703872026" class="whatsapp-btn" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <nav>
+        <a href="index.html" class="logo-text">KMS <span style="color:white">TECH</span></a>
+        <ul class="nav-links">
+            <li><a href="index.html">index</a></li>
+            <li><a href="About Us.html">About Us</a></li>
+            <li><a href="Services.html">Services</a></li>
+            <li><a href="Projects.html" style="color: var(--primary); opacity: 1;">Projects</a></li>
+            <li><a href="Contact us.html">Contact</a></li>
+        </ul>
+        <div class="logo-wrapper"><img src="images/logo.png" alt="KMS Logo"></div>
+    </nav>
+
+    <header class="hero">
+        <span class="tag">Proven Track Record</span>
+        <h1>Engineering Excellence</h1>
+        <p>A showcase of high-impact ICT infrastructure and security deployments across Uganda.</p>
+    </header>
+
+    <main class="projects-grid">
+        <div class="project-card">
+            <img src="https://images.unsplash.com/photo-1544197150-b99a580bb7a8?q=80&w=1000" alt="Networking Project" class="project-img">
+            <div class="project-content">
+                <span class="tag">Networking</span>
+                <h3>Enterprise Fiber Backbone</h3>
+                <p>Designed and implemented a high-speed fiber optic network for a multi-story corporate plaza in Kampala, ensuring 99.9% uptime.</p>
+                <div class="project-stats">
+                    <div class="stat-item"><i class="fas fa-check-circle"></i> Completed 2024</div>
+                    <div class="stat-item"><i class="fas fa-bolt"></i> 10Gbps Ready</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="project-card">
+            <img src="https://images.unsplash.com/photo-1557597774-9d2739f85a94?q=80&w=1000" alt="CCTV Project" class="project-img">
+            <div class="project-content">
+                <span class="tag">Security</span>
+                <h3>Industrial IP Surveillance</h3>
+                <p>Full-scale installation of 64+ 4K AI-powered cameras with remote monitoring and centralized storage for a manufacturing plant.</p>
+                <div class="project-stats">
+                    <div class="stat-item"><i class="fas fa-check-circle"></i> Completed 2025</div>
+                    <div class="stat-item"><i class="fas fa-shield-alt"></i> AI Detection</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="project-card">
+            <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc48?q=80&w=1000" alt="Server Project" class="project-img">
+            <div class="project-content">
+                <span class="tag">Managed IT</span>
+                <h3>Hybrid Cloud Migration</h3>
+                <p>Transformed on-premise legacy servers to a hybrid cloud environment, reducing hardware maintenance costs by 40%.</p>
+                <div class="project-stats">
+                    <div class="stat-item"><i class="fas fa-check-circle"></i> Completed 2024</div>
+                    <div class="stat-item"><i class="fas fa-cloud"></i> Azure/AWS</div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <section style="text-align: center; padding: 60px 20px; background: rgba(255,255,255,0.02);">
+        <h2 style="margin-bottom: 20px;">Ready to be our next success story?</h2>
+        <a href="Contact us.html" style="text-decoration: none; color: var(--primary); font-weight: 700; border-bottom: 2px solid var(--primary);">Start your project today →</a>
+    </section>
+
+    <footer style="text-align: center; padding: 40px; color: #4b5563; border-top: 1px solid var(--border);">
+        <p>© 2026 KMS Technologies UG.</p>
+    </footer>
+
+</body>
+</html>

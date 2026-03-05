@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KMS Technologies UG | Premier ICT & Engineering</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        :root {
+            --primary: #0ea5e9; 
+            --bg: #030712;
+            --card-bg: rgba(17, 24, 39, 0.6);
+            --text: #f9fafb;
+            --border: rgba(255, 255, 255, 0.1);
+            --whatsapp: #25d366;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Inter', sans-serif; }
+        body { background-color: var(--bg); color: var(--text); line-height: 1.6; overflow-x: hidden; }
+
+        /* --- NAVIGATION --- */
+        nav {
+            position: fixed; top: 20px; left: 50%; transform: translateX(-50%);
+            width: 95%; max-width: 1200px; background: rgba(3, 7, 18, 0.85);
+            backdrop-filter: blur(15px); border: 1px solid var(--border);
+            border-radius: 100px; display: flex; justify-content: space-between;
+            align-items: center; padding: 10px 25px; z-index: 1000;
+        }
+        .logo-text { font-weight: 800; font-size: 1.4rem; color: var(--primary); text-decoration: none; }
+        .nav-links { display: flex; gap: 20px; list-style: none; }
+        .nav-links a { text-decoration: none; color: var(--text); font-size: 0.9rem; opacity: 0.7; transition: 0.3s; }
+        .nav-links a:hover { opacity: 1; color: var(--primary); }
+        .logo-img-wrapper { width: 40px; height: 40px; border-radius: 50%; overflow: hidden; background: white; border: 2px solid var(--primary); }
+        .logo-img-wrapper img { width: 100%; height: 100%; object-fit: contain; }
+
+        /* --- HERO --- */
+        .hero {
+            height: 100vh; display: flex; align-items: center; justify-content: center;
+            position: relative; text-align: center;
+            background: linear-gradient(rgba(3,7,18,0.7), rgba(3,7,18,0.9)), url('images/hero-bg.jpg'); 
+            background-size: cover; background-position: center; background-attachment: fixed;
+        }
+        .hero-content { position: relative; z-index: 2; max-width: 900px; padding: 0 20px; }
+        .hero h1 { font-size: clamp(2.5rem, 8vw, 4.5rem); font-weight: 800; margin-bottom: 20px; line-height: 1.1; }
+        .hero h1 span { color: var(--primary); }
+        .hero p { font-size: 1.2rem; color: #94a3b8; margin-bottom: 35px; }
+
+        /* --- BUTTONS --- */
+        .btn { padding: 15px 30px; border-radius: 10px; font-weight: 700; text-decoration: none; transition: 0.3s; display: inline-block; }
+        .btn-primary { background: var(--primary); color: white; margin-right: 15px; }
+        .btn-outline { border: 1px solid white; color: white; }
+        .btn:hover { transform: translateY(-3px); box-shadow: 0 10px 20px rgba(14, 165, 233, 0.2); }
+
+        /* --- SERVICES GRID --- */
+        .services-section { max-width: 1200px; margin: 0 auto; padding: 100px 20px; }
+        .section-header { text-align: center; margin-bottom: 60px; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 25px; }
+
+        .service-card {
+            background: var(--card-bg); border: 1px solid var(--border);
+            border-radius: 24px; overflow: hidden; transition: 0.4s ease;
+            display: flex; flex-direction: column;
+        }
+        .service-card:hover { border-color: var(--primary); transform: translateY(-10px); background: rgba(17, 24, 39, 0.9); }
+
+        .card-img-holder { width: 100%; height: 200px; overflow: hidden; position: relative; }
+        .card-img-holder img { width: 100%; height: 100%; object-fit: cover; transition: 0.6s; }
+        .service-card:hover img { transform: scale(1.1) rotate(1deg); }
+
+        .card-text { padding: 25px; flex-grow: 1; }
+        .card-text h3 { margin-bottom: 12px; color: var(--primary); font-size: 1.3rem; text-transform: capitalize; }
+        .card-text p { font-size: 0.95rem; color: #94a3b8; line-height: 1.5; }
+
+        /* --- WHATSAPP --- */
+        .whatsapp-btn {
+            position: fixed; bottom: 30px; right: 30px;
+            background: var(--whatsapp); color: white; width: 60px; height: 60px;
+            border-radius: 50%; display: flex; align-items: center; justify-content: center;
+            font-size: 32px; text-decoration: none; z-index: 2000;
+            box-shadow: 0 10px 25px rgba(37, 211, 102, 0.3); transition: 0.3s;
+        }
+        .whatsapp-btn:hover { transform: scale(1.1); }
+
+        footer { text-align: center; padding: 60px 20px; border-top: 1px solid var(--border); color: #4b5563; }
+
+        @media (max-width: 768px) { 
+            .nav-links { display: none; } 
+            .grid { grid-template-columns: 1fr; }
+            .btn { width: 100%; margin-bottom: 10px; }
+        }
+    </style>
+</head>
+<body>
+
+    <a href="https://wa.me/256703872026" class="whatsapp-btn" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <nav>
+        <a href="index.html" class="logo-text">KMS <span style="color:white">TECH</span></a>
+        <ul class="nav-links">
+            <li><a href="index.html">index</a></li>
+            <li><a href="About Us.html">About</a></li>
+            <li><a href="Services.html">Services</a></li>
+            <li><a href="Projects.html">Projects</a></li>
+            <li><a href="Contact us.html">Contact</a></li>
+        </ul>
+        <div class="logo-img-wrapper">
+            <img src="images/logo.png" alt="KMS Logo">
+        </div>
+    </nav>
+
+    <header class="hero">
+        <div class="hero-content">
+            <h1>Integrated <span>Engineering</span> & ICT Solutions</h1>
+            <p>From Smart Surveillance to Solar Power—KMS Technologies UG delivers future-proof infrastructure for modern businesses.</p>
+            <div class="btn-group">
+                <a href="#services" class="btn btn-primary">Our Expertise</a>
+                <a href="Contact us.html" class="btn btn-outline">Consult an Engineer</a>
+            </div>
+        </div>
+    </header>
+
+    <section class="services-section" id="services">
+        <div class="section-header">
+            <h2 style="font-size: 2.5rem; margin-bottom: 10px;">Our Specialized Services</h2>
+            <div style="width: 60px; height: 4px; background: var(--primary); margin: 0 auto 20px;"></div>
+            <p style="color: #94a3b8; max-width: 600px; margin: 0 auto;">Comprehensive engineering and technological support tailored for the Ugandan market.</p>
+        </div>
+
+        <div class="grid">
+            <div class="service-card">
+                <div class="card-img-holder">
+                    <img src="images/networking.jpg" alt="Networking Services">
+                </div>
+                <div class="card-text">
+                    <h3>Enterprise Networking</h3>
+                    <p>Structured cabling, high-speed fiber optics, and robust WiFi networks for corporate offices and industrial complexes.</p>
+                </div>
+            </div>
+
+            <div class="service-card">
+                <div class="card-img-holder">
+                    <img src="images/cctv.jpg" alt="Security Services">
+                </div>
+                <div class="card-text">
+                    <h3>Smart Surveillance & Security</h3>
+                    <p>Standard and AI-powered CCTV systems, biometric access controls, and security hardware repair & maintenance.</p>
+                </div>
+            </div>
+
+            <div class="service-card">
+                <div class="card-img-holder">
+                    <img src="images/software.jpg" alt="Software Development">
+                </div>
+                <div class="card-text">
+                    <h3>Software Development & Sales</h3>
+                    <p>Custom web and software design, software licensing, professional training, and seamless installation services.</p>
+                </div>
+            </div>
+
+            <div class="service-card">
+                <div class="card-img-holder">
+                    <img src="images/office phone.jpg" alt="Telephony Services">
+                </div>
+                <div class="card-text">
+                    <h3>PBX & Intercom Systems</h3>
+                    <p>Professional installation of analog and digital office phone systems and intercoms for streamlined communication.</p>
+                </div>
+            </div>
+
+            <div class="service-card">
+                <div class="card-img-holder">
+                    <img src="images/electrical.jpg" alt="Solar Engineering">
+                </div>
+                <div class="card-text">
+                    <h3>Electrical & Solar Engineering</h3>
+                    <p>Expert electrical wiring and sustainable solar power installations for residential and commercial premises.</p>
+                </div>
+            </div>
+
+            <div class="service-card">
+                <div class="card-img-holder">
+                    <img src="images/sales.jpg" alt="Hardware Sales">
+                </div>
+                <div class="card-text">
+                    <h3>Hardware Sales & Support</h3>
+                    <p>Supplying premium computers, printers, replacement parts, and all essential networking equipment.</p>
+                </div>
+            </div>
+
+            <div class="service-card">
+                <div class="card-img-holder">
+                    <img src="images/servers.jpg" alt="Server Services">
+                </div>
+                <div class="card-text">
+                    <h3>Managed IT Support</h3>
+                    <p>Server configuration, cloud backup solutions, and proactive maintenance to ensure zero business downtime.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2026 KMS Technologies UG. Your Trusted Engineering Partner.</p>
+    </footer>
+
+</body>
+</html>
